@@ -1,0 +1,36 @@
+name: app_question
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  assets:
+    - assets/
+    - assets/images/
+  fonts:
+    - family: SF Pro Display
+      fonts:
+        - asset: assets/fonts/SFProDisplayBold.ttf
+          weight: 700
+        - asset: assets/fonts/SFProDisplayRegular.ttf
+          weight: 400
+        - asset: assets/fonts/SFProDisplaySemibold.ttf
+          weight: 600
+        - asset: assets/fonts/SFProDisplayMedium.ttf
+          weight: 500
+    - family: Mona-Sans
+      fonts:
+        - asset: assets/fonts/MonaSansMedium.ttf
+          weight: 500
