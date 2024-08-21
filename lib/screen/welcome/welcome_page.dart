@@ -10,7 +10,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
+      backgroundColor: Colors.white,
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           leading:isFirstTimeInstallApp ? IconButton(
@@ -29,7 +29,6 @@ class WelcomePage extends StatelessWidget {
         children: [
           _buildTitleAndDesc(),
           const Spacer(),
-          _buildButtonChangeLanguage(context),
           _buildButtonLogin(),
           _buildButtonRegister(),
         ],
@@ -45,11 +44,11 @@ class WelcomePage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "welcome",
+              "Welcome",
               // "welcome_title".tr(),
               style: TextStyle(
-                color: Colors.white.withOpacity(0.87),
-                fontSize: 32,
+                color: Color(0xFF333366),
+                fontSize: 55,
                 fontWeight: FontWeight.bold,
                 fontFamily: "Lato",
 
@@ -57,14 +56,14 @@ class WelcomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          const SizedBox(height: 26,),
+          const SizedBox(height: 12,),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              "welcome pahe",
+              "Đăng nhập để bảo vệ bản quyền phần mềm",
               // "welcome_desc".tr(),
               style: TextStyle(
-                color: Colors.white.withOpacity(0.67),
+                color: Colors.grey,
                 fontSize: 16,
                 fontFamily: "Lato",
               ),
@@ -76,62 +75,45 @@ class WelcomePage extends StatelessWidget {
       ),
     );
   }
-  Widget _buildButtonChangeLanguage(BuildContext context){
-    return Container(
-      width: double.infinity,
-      height: 48,
-      padding:const EdgeInsets.symmetric(horizontal: 24),
-      margin: const EdgeInsets.only(top: 20),
-      child: ElevatedButton(
-        onPressed: (){
-          // //lay ra locale hien tai
-          // final  currentLocale = context.locale.toString();
-          // if(currentLocale == "en"){
-          //   context.setLocale(const Locale("vi"));
-          // }else {
-          //   context.setLocale(const Locale("en"));
-          // }
-        },
-        style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF8875FF),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4),
-            )
-        ),
-        child:  const  Text(
-          "Đổi ngôn ngữ",
-          style:  TextStyle(
-              fontSize: 16,
-              fontFamily: "Lato",
-              color: Colors.white
-          ),
-        ),
-      ),
-    );
-  }
   Widget _buildButtonLogin(){
     return Container(
       width: double.infinity,
       height: 48,
-      padding:const EdgeInsets.symmetric(horizontal: 24),
       margin: const EdgeInsets.symmetric(vertical: 28),
+      padding:const EdgeInsets.symmetric(horizontal: 20),
       child: ElevatedButton(
         onPressed: (){
-          // TODO : Xu ly sau
+          //TODO : xu ly sau
         },
-        style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF8875FF),
+        style: OutlinedButton.styleFrom(
+            backgroundColor: Color(0xFF336699),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
-            )
+            ),
         ),
-        child:  const  Text(
-          "LOGIN",
-          style:  TextStyle(
-              fontSize: 16,
-              fontFamily: "Lato",
-              color: Colors.white
-          ),
+        child:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              "assets/images/google.png",
+              width: 32,
+              height: 32,
+              fit: BoxFit.contain,
+            ),
+            SizedBox(width: 12,),
+            Container(
+              margin: const EdgeInsets.only(left: 10),
+              child: const Text(
+                "Login with Google",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: "Lato",
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -146,22 +128,22 @@ class WelcomePage extends StatelessWidget {
         onPressed: (){
           //TODO : xu ly sau
         },
-        style: OutlinedButton.styleFrom(
-            backgroundColor: Colors.transparent,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4),
-            ),
-            side: const BorderSide(
-              width: 1,
-              color: Color(0xFF121212) ,
-            )
-        ),
+        // style: OutlinedButton.styleFrom(
+        //     backgroundColor: Colors.transparent,
+        //     shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.circular(4),
+        //     ),
+        //     side: const BorderSide(
+        //       width: 1,
+        //       color: Color(0xFF121212) ,
+        //     )
+        // ),
         child: const Text(
-          "CREATE ACCOUNT",
+          "Để sau ",
           style: TextStyle(
             fontSize: 16,
             fontFamily: "Lato",
-            color: Colors.white,
+            color: Colors.grey,
           ),
         ),
       ),

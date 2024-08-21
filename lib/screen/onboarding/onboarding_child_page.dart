@@ -1,6 +1,6 @@
 // dong vai tro la giao dien man hinh chinh
 import 'package:flutter/material.dart';
-import 'package:app_question/ultils.enum/onboarding_page_position.dart';
+import 'package:app_question/ultils/enum/onboarding_page_position.dart';
 
 class OnboardingChildPage extends StatelessWidget {
   final OnboardingPagePosition onboardingPagePosition;

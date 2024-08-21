@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:app_question/screen/welcome/welcome_page.dart';
-import 'package:app_question/ultils/onboarding_page_position.dart';
+import 'package:app_question/ultils/enum/onboarding_page_position.dart';
 import 'onboarding_child_page.dart';
 
 
